@@ -1,6 +1,6 @@
 # express-todo
 ```
-使用Express建立的Todo RESTful Api
+使用 Express 建立的 Todo RESTful Api
 ```
 ## Todo
 - [ ] 前端頁面
