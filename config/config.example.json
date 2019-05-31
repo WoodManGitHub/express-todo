@@ -1,0 +1,8 @@
+{
+    "database": {
+        "dbUrl": "MongoDB Url"
+    },
+    "keys": {
+        "secretOrKey": "Your secret"
+    }
+}
