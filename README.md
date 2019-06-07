@@ -5,9 +5,11 @@
 
 ## Project setup
 ```
-npm install
+1. clone project
+2. cd express-todo
+3. npm install
 ```
-編輯 config.example.json 並更名成 config.json
+Edit config.example.json and rename to config.json
 
 
 ## Run
