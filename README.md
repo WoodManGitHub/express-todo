@@ -16,3 +16,6 @@ Edit config.example.json and rename to config.json
 ```
 npm run start
 ```
+## Todo
+- [ ] 前端頁面
+- [ ] CI/CD
