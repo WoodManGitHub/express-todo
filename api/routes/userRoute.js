@@ -7,7 +7,7 @@ const User = require('../models/userModel');
 const config = require('../../config/config');
 
 router.post('/register', (req, res) => {
-    User.findOne({email: req.body.email}).then((user) => {
+    User.findOne({ email: req.body.email }).then((user) => {
         if (user) {
             return res.status(400).json('Email has been registered.');
         } else {
@@ -32,7 +32,7 @@ router.post('/login', (req, res) => {
     const email = req.body.email;
     const password = req.body.password;
 
-    User.findOne({email: email}).then(user => {
+    User.findOne({ email: email }).then(user => {
         if (!user) {
             return res.status(404).json('No user.');
         };
@@ -44,7 +44,7 @@ router.post('/login', (req, res) => {
                     username: user.username
                 };
 
-                jwt.sign(rule, config.keys.secretOrKey, {expiresIn: 3600}, (err, token) => {
+                jwt.sign(rule, config.keys.secretOrKey, { expiresIn: 3600 }, (err, token) => {
                     if (err) throw err;
                     res.json({
                         success: true,
@@ -58,7 +58,7 @@ router.post('/login', (req, res) => {
     });
 });
 
-router.get('/current', passport.authenticate('jwt', {session: false}), (req, res) => {
+router.get('/current', passport.authenticate('jwt', { session: false }), (req, res) => {
     res.json({
         id: req.user.id,
         username: req.user.username,
